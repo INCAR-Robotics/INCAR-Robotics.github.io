@@ -10,22 +10,25 @@
       
       
       
-        <link rel="next" href="basics/workspace/">
+        <link rel="next" href="tutorials/workspace/">
       
-      
-      <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
-    
-    
-      
-        <title>Incar Docs</title>
-      
-    
-    
-      <link rel="stylesheet" href="assets/stylesheets/main.e53b48f4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+      <link rel="icon" href="assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Installation - INCAR Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -44,11 +47,12 @@
       
     
     
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
-    
     
     
   </head>
@@ -59,7 +63,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -84,10 +88,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Incar Docs" class="md-header__button md-logo" aria-label="Incar Docs" data-md-component="logo">
+    <a href="https://incar-robotics.se" title="INCAR Docs" class="md-header__button md-logo" aria-label="INCAR Docs" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -98,13 +101,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Incar Docs
+            INCAR Docs
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting Started
+              Installation
             
           </span>
         </div>
@@ -115,46 +118,6 @@
     
     
     
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
     
     
   </nav>
@@ -182,19 +145,67 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Incar Docs" class="md-nav__button md-logo" aria-label="Incar Docs" data-md-component="logo">
+    <a href="https://incar-robotics.se" title="INCAR Docs" class="md-nav__button md-logo" aria-label="INCAR Docs" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="assets/logo.png" alt="logo">
 
     </a>
-    Incar Docs
+    INCAR Docs
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
       
       
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
     
@@ -214,9 +225,14 @@
   
   
   <span class="md-ellipsis">
-    Getting Started
+    
+  
+    Installation
+  
+
     
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -227,9 +243,14 @@
   
   
   <span class="md-ellipsis">
-    Getting Started
+    
+  
+    Installation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -250,9 +271,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Getting Started.
+      
+        Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First Startup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifying-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verifying Installation
+      
     </span>
   </a>
   
@@ -261,6 +312,182 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/workspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup your workspace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/teleoperation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teleoperate your robot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/retrieving_state/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Retrieving state
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/collecting_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collecting data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/training/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Training a policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/inference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playing a policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -289,9 +516,14 @@
   
   
   <span class="md-ellipsis">
-    Core - Basics
+    
+  
+    Advanced features
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -300,7 +532,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Core - Basics
+            
+  
+    Advanced features
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -311,14 +547,19 @@
   
   
     <li class="md-nav__item">
-      <a href="basics/workspace/" class="md-nav__link">
+      <a href="advanced/extensions/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Workspace Setup
+    
+  
+    Using extensions
+  
+
     
   </span>
+  
   
 
       </a>
@@ -334,14 +575,19 @@
   
   
     <li class="md-nav__item">
-      <a href="basics/datasets/" class="md-nav__link">
+      <a href="advanced/ppp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Creating Datasets
+    
+  
+    Custom data processing
+  
+
     
   </span>
+  
   
 
       </a>
@@ -357,14 +603,19 @@
   
   
     <li class="md-nav__item">
-      <a href="basics/training/" class="md-nav__link">
+      <a href="advanced/camera/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Training Policies
+    
+  
+    Custom camera
+  
+
     
   </span>
+  
   
 
       </a>
@@ -380,14 +631,19 @@
   
   
     <li class="md-nav__item">
-      <a href="basics/skills/" class="md-nav__link">
+      <a href="advanced/policy/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Playing Skills
+    
+  
+    Custom policy
+  
+
     
   </span>
+  
   
 
       </a>
@@ -403,14 +659,19 @@
   
   
     <li class="md-nav__item">
-      <a href="basics/inspector.md" class="md-nav__link">
+      <a href="advanced/routines/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Inspector Suite
+    
+  
+    Routines
+  
+
     
   </span>
+  
   
 
       </a>
@@ -449,9 +710,14 @@
   
   
   <span class="md-ellipsis">
-    Core - Advanced
+    
+  
+    Examples
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -460,7 +726,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Core - Advanced
+            
+  
+    Examples
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -471,14 +741,19 @@
   
   
     <li class="md-nav__item">
-      <a href="advanced/ppp.md" class="md-nav__link">
+      <a href="examples/ur16/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Preprocessing Pipeline
+    
+  
+    UR16 integration
+  
+
     
   </span>
+  
   
 
       </a>
@@ -494,14 +769,19 @@
   
   
     <li class="md-nav__item">
-      <a href="advanced/models.md" class="md-nav__link">
+      <a href="examples/hand/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Adding Model Architectures
+    
+  
+    Hand teleop and policy
+  
+
     
   </span>
+  
   
 
       </a>
@@ -517,14 +797,19 @@
   
   
     <li class="md-nav__item">
-      <a href="advanced/training.md" class="md-nav__link">
+      <a href="examples/s2/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Training Settings
+    
+  
+    Creating a S2 policy
+  
+
     
   </span>
+  
   
 
       </a>
@@ -540,14 +825,47 @@
   
   
     <li class="md-nav__item">
-      <a href="advanced/routines.md" class="md-nav__link">
+      <a href="examples/relative_pos/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Routines
+    
+  
+    Relative position control
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="examples/gr00t/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Running GR00T
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -570,80 +888,46 @@
   
   
     <li class="md-nav__item">
-      <a href="controls.md" class="md-nav__link">
+      <a href="roadmap/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
     Controls
+  
+
     
   </span>
   
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ar.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    AR
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="robot.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Robot Implementation
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="documentation.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Maintaining Documentation
-    
-  </span>
   
 
       </a>
@@ -678,9 +962,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Getting Started.
+      
+        Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First Startup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifying-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verifying Installation
+      
     </span>
   </a>
   
@@ -696,6 +1010,7 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
@@ -703,39 +1018,105 @@
 
 
 <h1 id="welcome-to-the-incar-skill-system">Welcome to the Incar Skill System</h1>
-<p>This documentation contains general information regarding the installation and usage.
-The incar skill system consists of three main components:</p>
+<h2 id="installation">Installation</h2>
+<p>To install the Incar Skill System, create an environment and install the following package:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux</label><label for="__tabbed_1_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>incar
+<span class="nb">source</span><span class="w"> </span>incar/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>git+ssh://git@github.com/INCAR-Robotics/core
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">python</span> <span class="n">-m</span> <span class="n">venv</span> <span class="n">incar</span>
+<span class="n">incar</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">activate</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="p">+</span><span class="n">ssh</span><span class="p">://</span><span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">INCAR-Robotics</span><span class="p">/</span><span class="n">core</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<details class="info">
+<summary>Install with custom FFmpeg installation</summary>
+<p>If you don't care about the FFmpeg installation, you can skip this step, and a default FFmpeg version is automatically retrieved from PyPi. However, if you want to use your custom installed FFmpeg version, make sure FFmpeg is installed as a shared library and run the following command:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>--force-reinstall<span class="w"> </span><span class="nv">av</span><span class="o">==</span><span class="m">16</span>.1.0<span class="w"> </span>--no-binary<span class="w"> </span>av
+</code></pre></div>
+<p>To install a custom FFmpeg build on Ubuntu you can run the following commands:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nasm<span class="w"> </span>pkg-config
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/FFmpeg/FFmpeg
+<span class="nb">cd</span><span class="w"> </span>FFmpeg
+./configure<span class="w"> </span>--enable-shared
+make
+make<span class="w"> </span>install
+</code></pre></div>
+<p>Run <code>./configure -h</code> for more configuration options.</p>
+<p>Check if the install works with <code>ffmpeg -v</code>. </p>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>If you get an error similar to <code>ffmpeg: error while loading shared libraries: libavdevice.so.62: cannot open shared object file: No such file or directory</code>, the linker can not find the install path of the library. To solve this: </p>
 <ul>
-<li>The core system, which handles most of the logic, networking, data collection, training, and running of models.</li>
-<li>A teleoperation app for the Meta Quest 3, which allows you to stream trajectories and other inputs.</li>
-<li>A robot implementation that interprets the commands. Since each robot is different, you might need to build this component yourself, however we do provide building blocks for easy integration. Furthermore, implementations for the <code>Viper 300S</code>, <code>ufactory lite6</code>, and <code>Franka Panda</code> robots are available.</li>
+<li>run <code>sudo find / -name libavdevice.so.62</code> to find where the package is installed (likely in <code>/usr/local/lib</code> on Ubuntu)</li>
+<li>edit the <code>/etc/ld.so.conf</code> file and add the path on a new line</li>
+<li>run <code>sudo ldconfig</code></li>
 </ul>
+</div>
+</details>
+<p>Start the incar system with the following command:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux</label><label for="__tabbed_2_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># Remember to source the python environment first</span>
+incar<span class="w"> </span>run
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c"># Remember to source the python environment first</span>
+<span class="n">incar</span> <span class="n">run</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="first-startup">First Startup</h3>
+<p>Once the Incar Skill System is installed and you use the regular <code>incar run</code> command, you will be prompted to download the latest GUI version. Once the GUI is downloaded and started, enter your license key and validate it.</p>
+<h2 id="verifying-installation">Verifying Installation</h2>
+<p>On the GUI, you can press 'launch commander' to allow a headset to connect. This will display a QR code on the screen to be scanned by the headset.</p>
+<p>In order to scan the QR code, go to <code>incar-robotics.se/teleop</code> in the headset's browser and follow the steps appearing on screen. </p>
+<!-- <p float="left" align="middle">
+  <img src="./tutorials/media/GUISartQuest.webp" width="340" />
+  <img src="./tutorials/media/ConnectTeleop.webp" width="340"/>
+</p> -->
+<p><img alt="" src="tutorials/media/GUISartQuest.webp" />
+<img alt="" src="tutorials/media/ConnectTeleop.webp" /></p>
+<details class="tip">
+<summary>Save <code>incar-robotics.se/teleop</code> to the library</summary>
+<p>You can save the teleop page to your library for easy access by pressing the three dots in the top right corner &gt; add to library.
+<img src="./tutorials/media/AddToLibrary.webp" /></p>
+</details>
+<p>In a second terminal, run the robotdummy:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Linux</label><label for="__tabbed_3_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># Remember to source the python environment first</span>
+incar<span class="w"> </span>robotdummy
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c"># Remember to source the python environment first</span>
+<span class="n">incar</span> <span class="n">robotdummy</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>In the GUI, connect to the robot dummy using the local host ip (<code>127.0.0.1</code>)</p>
+<p><img alt="" src="tutorials/media/ConnectRobot.png" /></p>
+<p>You can now see your teleop commands plotted by the robot dummy: If you press the <code>grip</code> + <code>primary</code> button, velocity commands are streamed to the robot dummy. You can anchor the origin to the current controller pose by pressing <code>primary</code> + <code>secondary</code> button until the controller vibrates.</p>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>The Incar Teleop app is not yet publicly available, contact us for help with installation.</p>
+<p class="admonition-title">Button Labels</p>
+<p><p float="left" align="middle">
+  <img src="./tutorials/media/ControllerButtons.jpeg" width="340"/>
+</p></p>
 </div>
-<h2 id="getting-started">Getting Started.</h2>
-<p>To install the core system, run:</p>
-<pre><code class="language-bash">mkdir incar_ws &amp;&amp; cd incar_ws
-python -m venv venv_incar
-source bin/activate
-git clone https://github.com/INCAR-Robotics/core.git
-cd core
-pip install -e .
-</code></pre>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>If you get an error that the directory can not be installed in editable mode, try first running <code>pip install --upgrade pip</code></p>
-</div>
-<p>To start up the core system, run</p>
-<pre><code class="language-bash">python core/incar/manager.py
-</code></pre>
-<p>Use the GUI to connect your teleoperation app and robot, and to teleoperate the robots, play skills, or collect datasets.</p>
-<p><img alt="GUI" src="GUI.png" /></p>
-<div class="admonition note">
-<p class="admonition-title">TODO</p>
-<p>Installation instructions for teleop app installation and robot implementations</p>
-</div>
+<p>Next step: <a href="tutorials/workspace/">set up a workspace</a></p>
 
 
 
@@ -743,6 +1124,27 @@ pip install -e .
 
 
 
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 23, 2026 15:08:28 UTC">April 23, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
 
 
 
@@ -753,6 +1155,8 @@ pip install -e .
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -784,10 +1188,11 @@ pip install -e .
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.select", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
