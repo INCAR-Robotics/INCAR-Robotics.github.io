@@ -1008,48 +1008,52 @@
 <p>Each dataset has a config file named <code>dataset_config.json</code> which describes the features and their shapes that are present in the dataset. Furthermore each demo has a <code>meta.json</code> file which describes when the demo was recorded, statistics used for normalization as well as some other information.</p>
 </details>
 <h2 id="dataset-creation">Dataset Creation</h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Possibility to create a new dataset within the GUI is on the <a href="../../roadmap/">roadmap</a>.</p>
-</div>
-<p>In order to create a new dataset, first create a folder with a <code>dataset_config.json</code> file in <code>ws/datasets</code>, where <code>ws</code> is the workspace you are working in. In the config file, list all features to be recorded. Features are identified by key and have to match one of the following:</p>
+<p>In order to create a new dataset, open the dataset panel and click the '+' icon. You can now choose a name for the dataset and select all features that you want to record. Features that can be selected for recording are:</p>
 <ul>
-<li>video stream keys (as they appear in the GUI Live Data - Video Streams)</li>
-<li>outgoing commands (as they appear in the GUI Live Data - Incomming message fields)</li>
-<li>incomming robot state (as they appear in the GUI Live Data - Incomming message fields)</li>
-<li>Select few additional keys can be logged:<ul>
-<li><code>left.buttons</code>/<code>right.buttons</code>: JSON dict serialized as string containing the button states of the controllers. This is useful for e.g. filtering data based on whether control was active, removing dead-time.</li>
-<li><code>pedals</code>: JSON dict serialized as string containing states of the feet pedals.</li>
+<li>video stream keys (as they appear under Live Data - Video Streams)</li>
+<li>outgoing commands (as they appear under Live Data - Incomming message fields)</li>
+<li>incomming robot state (as they appear under Live Data - Incomming message fields)</li>
 </ul>
-</li>
-</ul>
-<div class="highlight"><span class="filename">ws/datasets/my_dataset/dataset_config.json</span><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.0.1&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;video_fps&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;features&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;camera_one&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VISUAL&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;shape&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">480</span><span class="p">,</span><span class="w"> </span><span class="mi">640</span><span class="p">]</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;right.commands.arm.ee.velocity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ACTION&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;shape&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;arm.joints.position&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;STATE&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;shape&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;force_torque&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;STATE&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;shape&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;right.buttons&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TEXT&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;shape&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+<p>If the features are missing from the live data, ensure that you have connected the headset and the robot.</p>
+<!-- ## Dataset Creation
+In order to create a new dataset, first create a folder with a `dataset_config.json` file in `ws/datasets`, where `ws` is the workspace you are working in. In the config file, list all features to be recorded. Features are identified by key and have to match one of the following:
+
+- video stream keys (as they appear in the GUI Live Data - Video Streams)
+- outgoing commands (as they appear in the GUI Live Data - Incomming message fields)
+- incomming robot state (as they appear in the GUI Live Data - Incomming message fields)
+- Select few additional keys can be logged:
+    - `left.buttons`/`right.buttons`: JSON dict serialized as string containing the button states of the controllers. This is useful for e.g. filtering data based on whether control was active, removing dead-time.
+    - `pedals`: JSON dict serialized as string containing states of the feet pedals.
+
+```json title="ws/datasets/my_dataset/dataset_config.json"
+{
+    "version": "0.0.1",
+    "video_fps": 30,
+    "features": {
+        "camera_one": {
+            "type": "VISUAL",
+            "shape": [3, 480, 640]
+        },
+        "right.commands.arm.ee.velocity": {
+            "type": "ACTION",
+            "shape": [6]
+        },
+        "arm.joints.position": {
+            "type": "STATE",
+            "shape": [7]
+        },
+        "force_torque": {
+            "type": "STATE",
+            "shape": [6]
+        },
+        "right.buttons": {
+            "type": "TEXT",
+            "shape": []
+        }
+    }
+}
+``` -->
+
 <h2 id="recording-a-demo">Recording a demo</h2>
 <p>To record a demo, make sure you select a dataset first and then use the start, stop or discard buttons in the GUI. The screen will turn red to indicate the recording state. Alternatively, you can start/stop recording by pressing <code>Y</code> + <code>rightTrigger</code>, and discard by pressing <code>B</code> + <code>rightTrigger</code> on the controllers.</p>
 <div class="admonition note">
@@ -1086,7 +1090,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 23, 2026 15:08:28 UTC">April 23, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 24, 2026 14:20:54 UTC">April 24, 2026</span>
   </span>
 
     
