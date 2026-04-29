@@ -1079,13 +1079,13 @@
 <p>An extension for GR00T already exists in the <code>incar_baselines</code> package. This example walks through how to use the extension, but you can also look at the <a href="https://github.com/INCAR-Robotics/incar_baselines/blob/main/gr00t/gr00t.py">code</a> as an example for writing your own policy extension with server-client architecture.</p>
 <h3 id="motivation">Motivation</h3>
 <p>VLA's are promising in providing robustness to domain shift. For example, using a simple diffusion policy, performance breaks down as soon as the window blinds in our lab are opened:</p>
-<div class="admonition failure diffusion on varying lighting conditions">
-<p class="admonition-title">Failure</p>
+<div class="admonition failure">
+<p class="admonition-title">Diffusion on varying lighting conditions</p>
 <p><img alt="" src="../media/diffusion_lighting.webp" /></p>
 </div>
 <p>However, using GR00T, the lighting conditions are irrelevant. Even though it is trained on the same dataset as the diffusion policy. Moreover, it can generalize to e.g. blue liquid instead of red liquid, even though the policy has not seen this in the training data.</p>
-<div class="admonition success gr00t on varying lighting conditions">
-<p class="admonition-title">Success</p>
+<div class="admonition success">
+<p class="admonition-title">GR00T on varying lighting conditions</p>
 <p><img alt="" src="../media/groot_lighting.webp" /></p>
 </div>
 <h2 id="prerequisites">Prerequisites</h2>
@@ -1301,7 +1301,7 @@ On a RTX 5090 it might be possible to finetune when <a href="https://github.com/
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 29, 2026 13:56:36 UTC">April 29, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 29, 2026 14:26:00 UTC">April 29, 2026</span>
   </span>
 
     
