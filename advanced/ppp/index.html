@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -120,6 +120,46 @@
     
     
     
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
     
     
   </nav>
@@ -668,6 +708,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom input device
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../policy/" class="md-nav__link">
         
   
@@ -1110,13 +1178,13 @@ incar<span class="w"> </span>create_pkg<span class="w"> </span>--name<span class
 <span class="normal">53</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">incar.extensions.processing_step</span><span class="w"> </span><span class="kn">import</span> <span class="n">ProcessStep</span><span class="p">,</span> <span class="n">ProcessHook</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
 
-<span class="nd">@ProcessStep</span><span class="o">.</span><span class="n">register_subclass</span><span class="p">(</span><span class="s2">&quot;my_step&quot;</span><span class="p">)</span>
+<span class="nd">@ProcessStep</span><span class="o">.</span><span class="n">register_subclass</span><span class="p">(</span><span class="s2">"my_step"</span><span class="p">)</span>
 <span class="nd">@dataclass</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">MyStep</span><span class="p">(</span><span class="n">ProcessStep</span><span class="p">):</span>
     <span class="c1"># hooks are explained further down! Here, default hooks can be defined, which can still</span>
     <span class="c1"># be overwritten in config files.</span>
     <span class="n">hooks</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">ProcessHook</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="p">[</span><span class="n">ProcessHook</span><span class="o">.</span><span class="n">DATASET</span><span class="p">,</span> <span class="n">ProcessHook</span><span class="o">.</span><span class="n">OBSERVATION</span><span class="p">])</span>
-    <span class="n">feature</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">feature</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span>
     <span class="n">other_settings</span><span class="p">:</span> <span class="o">...</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1138,26 +1206,26 @@ incar<span class="w"> </span>create_pkg<span class="w"> </span>--name<span class
         <span class="c1"># Here, we get the path to the copied dataset and the dataset config.</span>
         <span class="c1"># Data is changed by changing the actual files. For example:</span>
         <span class="n">demos</span> <span class="o">=</span> <span class="p">[</span> <span class="n">f</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">scandir</span><span class="p">(</span><span class="n">root_path</span><span class="p">)</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">is_dir</span><span class="p">()]</span>
-        <span class="n">demos</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">demos</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+        <span class="n">demos</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">demos</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'_'</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
 
-        <span class="k">for</span> <span class="n">demo</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">demos</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;Processing MyStep&quot;</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">demo</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">demos</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s2">"Processing MyStep"</span><span class="p">):</span>
             <span class="c1"># Get meta-data for the demos</span>
-            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">root_path</span><span class="p">)</span> <span class="o">/</span> <span class="n">demo</span> <span class="o">/</span> <span class="n">DEMO_META_NAME</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">root_path</span><span class="p">)</span> <span class="o">/</span> <span class="n">demo</span> <span class="o">/</span> <span class="n">DEMO_META_NAME</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
                 <span class="n">demo_meta</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 
             <span class="c1"># Get the data of a feature</span>
             <span class="n">feature_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">root_path</span><span class="p">)</span> <span class="o">/</span> <span class="n">demo</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature</span>
-            <span class="k">with</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">feature_path</span> <span class="o">/</span> <span class="s2">&quot;data.h5&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-                <span class="n">feature_data</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][:]</span>
+            <span class="k">with</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">feature_path</span> <span class="o">/</span> <span class="s2">"data.h5"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">feature_data</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][:]</span>
 
             <span class="n">new_data</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># transform feature_data</span>
 
             <span class="c1"># Set the data of a feature</span>
-            <span class="k">with</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">feature_path</span> <span class="o">/</span> <span class="s2">&quot;data.h5&quot;</span><span class="p">,</span> <span class="s2">&quot;r+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-                <span class="n">f</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][:]</span> <span class="o">=</span> <span class="n">new_data</span>
+            <span class="k">with</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">feature_path</span> <span class="o">/</span> <span class="s2">"data.h5"</span><span class="p">,</span> <span class="s2">"r+"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">f</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][:]</span> <span class="o">=</span> <span class="n">new_data</span>
 
             <span class="c1"># If the dataset description changed, e.g. feature shape changed or</span>
-            <span class="c1"># a new feature was created, don&#39;t forget to reflect this change</span>
+            <span class="c1"># a new feature was created, don't forget to reflect this change</span>
             <span class="c1"># within `config`</span>
             <span class="n">config</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="o">...</span>
 </code></pre></div></td></tr></table></div></p>
@@ -1194,22 +1262,22 @@ incar<span class="w"> </span>create_pkg<span class="w"> </span>--name<span class
 <p><a href="../extensions/">Create an extension</a> containing the processing step implementation. Then pip install the extension.</p>
 <p>Now, the step can be used <a href="../../tutorials/training/#training-config">just as any other processing step</a> already included in the Incar Skill System. For example, the step above can be used by including the following in your training config:
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;policy&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;preprocessing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;steps&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"policy"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"preprocessing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"steps"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample_dt&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;dt&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1</span>
+<span class="w">                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sample_dt"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"dt"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1</span>
 <span class="w">                </span><span class="p">},</span>
 <span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;downsample_video&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;features&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;wrist_cam&quot;</span><span class="p">],</span>
-<span class="w">                    </span><span class="nt">&quot;new_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">240</span><span class="p">,</span><span class="w"> </span><span class="mi">320</span><span class="p">]</span>
+<span class="w">                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"downsample_video"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"wrist_cam"</span><span class="p">],</span>
+<span class="w">                    </span><span class="nt">"new_size"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">240</span><span class="p">,</span><span class="w"> </span><span class="mi">320</span><span class="p">]</span>
 <span class="w">                </span><span class="p">},</span>
 <span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my_step&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;feature&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;specific_feature&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;other_settings&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">...</span>
+<span class="w">                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my_step"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"feature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"specific_feature"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"other_settings"</span><span class="p">:</span><span class="w"> </span><span class="err">...</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">                </span><span class="err">...</span>
 <span class="w">            </span><span class="p">],</span>
@@ -1224,10 +1292,10 @@ incar<span class="w"> </span>create_pkg<span class="w"> </span>--name<span class
 <p class="admonition-title">Note</p>
 <p>Even though we set the default hooks, we can override them in the config:
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my_step&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;hooks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GET_ITEM&quot;</span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;feature&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;specific_feature&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;other_settings&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">...</span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my_step"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"GET_ITEM"</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"feature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"specific_feature"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"other_settings"</span><span class="p">:</span><span class="w"> </span><span class="err">...</span>
 <span class="p">}</span>
 </code></pre></div></p>
 </div>
@@ -1236,10 +1304,10 @@ incar<span class="w"> </span>create_pkg<span class="w"> </span>--name<span class
 <p class="admonition-title">Warning</p>
 <p>steps that use the hooks <code>TELEOP_COMMAND</code> or <code>INFERENCE_COMMAND</code> have to be added in the <code>workspace_config.json</code>, as these are independent of the policies</p>
 <div class="highlight"><span class="filename">workspace_config.json</span><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;command_processing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"command_processing"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;inspire_gripper&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;hooks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;TELEOP_COMMAND&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;INFERENCE_COMMAND&quot;</span><span class="p">]</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inspire_gripper"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"TELEOP_COMMAND"</span><span class="p">,</span><span class="w"> </span><span class="s2">"INFERENCE_COMMAND"</span><span class="p">]</span>
 <span class="w">        </span><span class="p">},</span>
 <span class="w">        </span><span class="err">...</span>
 <span class="w">    </span><span class="p">],</span>
@@ -1322,7 +1390,7 @@ incar<span class="w"> </span>create_pkg<span class="w"> </span>--name<span class
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.select", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -120,6 +120,46 @@
     
     
     
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
     
     
   </nav>
@@ -553,6 +593,34 @@
     
   
     Custom camera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom input device
   
 
     
@@ -1150,12 +1218,12 @@ incar<span class="w"> </span>create_pkg<span class="w"> </span>--name<span class
 <span class="kn">from</span><span class="w"> </span><span class="nn">incar.extensions.processing_step</span><span class="w"> </span><span class="kn">import</span> <span class="n">ProcessStep</span><span class="p">,</span> <span class="n">ProcessHook</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">.retargeting</span><span class="w"> </span><span class="kn">import</span> <span class="n">Retargeter</span>
 
-<span class="nd">@ProcessStep</span><span class="o">.</span><span class="n">register_subclass</span><span class="p">(</span><span class="s2">&quot;inspire_hand_remapping&quot;</span><span class="p">)</span>
+<span class="nd">@ProcessStep</span><span class="o">.</span><span class="n">register_subclass</span><span class="p">(</span><span class="s2">"inspire_hand_remapping"</span><span class="p">)</span>
 <span class="nd">@dataclass</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">InspireHandRemapping</span><span class="p">(</span><span class="n">ProcessStep</span><span class="p">):</span>
     <span class="n">hooks</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">ProcessHook</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="p">[</span><span class="n">ProcessHook</span><span class="o">.</span><span class="n">TELEOP_COMMAND</span><span class="p">])</span>
-    <span class="n">hand_features</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;left.commands.hand.joints.position&quot;</span><span class="p">,</span> <span class="s2">&quot;right.commands.hand.joints.position&quot;</span><span class="p">])</span>
-    <span class="n">processed_features</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;left.commands.hand.inspire&quot;</span><span class="p">,</span> <span class="s2">&quot;right.commands.hand.inspire&quot;</span><span class="p">])</span>
+    <span class="n">hand_features</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="p">[</span><span class="s2">"left.commands.hand.joints.position"</span><span class="p">,</span> <span class="s2">"right.commands.hand.joints.position"</span><span class="p">])</span>
+    <span class="n">processed_features</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="p">[</span><span class="s2">"left.commands.hand.inspire"</span><span class="p">,</span> <span class="s2">"right.commands.hand.inspire"</span><span class="p">])</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">retargeter</span> <span class="o">=</span> <span class="n">Retargeter</span><span class="p">()</span>
@@ -1184,21 +1252,21 @@ incar<span class="w"> </span>create_pkg<span class="w"> </span>--name<span class
 <h3 id="using-the-processing-step">Using the processing step</h3>
 <p>Now we need to add the retargeting in the <code>workspace_config.json</code>. Furthermore, we want to be able to engage/disengage our control. Since we don't have controllers with buttons, we suggest connecting bluetooth pedals to the headset, which can be configured with sending <code>A</code>, <code>B</code>, ... keys. Then we can use these to engage and disengage control.</p>
 <div class="highlight"><span class="filename">workspace_config.json</span><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;command_processing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"command_processing"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;inspire_hand_remapping&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inspire_hand_remapping"</span><span class="p">,</span>
 <span class="w">        </span><span class="p">},</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;require_active_button&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;features&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;left.commands.hand.inspire&quot;</span><span class="p">],</span>
-<span class="w">            </span><span class="nt">&quot;button_feature&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pedals&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;button_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A&quot;</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"require_active_button"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"left.commands.hand.inspire"</span><span class="p">],</span>
+<span class="w">            </span><span class="nt">"button_feature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pedals"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"button_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A"</span>
 <span class="w">        </span><span class="p">},</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;require_active_button&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;features&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;right.commands.hand.inspire&quot;</span><span class="p">],</span>
-<span class="w">            </span><span class="nt">&quot;button_feature&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pedals&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;button_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B&quot;</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"require_active_button"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"right.commands.hand.inspire"</span><span class="p">],</span>
+<span class="w">            </span><span class="nt">"button_feature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pedals"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"button_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"B"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="err">...</span>
 <span class="w">    </span><span class="p">],</span>
@@ -1256,7 +1324,7 @@ incar<span class="w"> </span>create_pkg<span class="w"> </span>--name<span class
 
 <span class="k">class</span><span class="w"> </span><span class="nc">InspireHand</span><span class="p">:</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">serial</span> <span class="o">=</span> <span class="n">openSerial</span><span class="p">(</span><span class="s1">&#39;/dev/ttyUSB0&#39;</span><span class="p">,</span> <span class="mi">115200</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">serial</span> <span class="o">=</span> <span class="n">openSerial</span><span class="p">(</span><span class="s1">'/dev/ttyUSB0'</span><span class="p">,</span> <span class="mi">115200</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">move_joints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">joint_positions</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]):</span>
         <span class="n">command</span> <span class="o">=</span> <span class="p">[</span>
@@ -1267,26 +1335,26 @@ incar<span class="w"> </span>create_pkg<span class="w"> </span>--name<span class
             <span class="nb">int</span><span class="p">(</span><span class="n">joint_positions</span><span class="p">[</span><span class="mi">4</span><span class="p">]),</span>
             <span class="nb">int</span><span class="p">(</span><span class="n">joint_positions</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
         <span class="p">]</span>
-        <span class="n">write6</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">serial</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;angleSet&#39;</span><span class="p">,</span> <span class="n">command</span><span class="p">)</span>
+        <span class="n">write6</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">serial</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">'angleSet'</span><span class="p">,</span> <span class="n">command</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">publish_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interface</span><span class="p">:</span> <span class="n">IncarRobotInterface</span><span class="p">):</span>
-        <span class="n">currentAngles</span> <span class="o">=</span> <span class="n">read6</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">serial</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;angleAct&#39;</span><span class="p">)</span>
-        <span class="n">currentForces</span> <span class="o">=</span> <span class="n">read6</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">serial</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;forceAct&#39;</span><span class="p">)</span>
-        <span class="n">interface</span><span class="o">.</span><span class="n">set_robot_state</span><span class="p">(</span><span class="s2">&quot;hand&quot;</span><span class="p">,</span> <span class="n">joint_pos</span><span class="o">=</span><span class="n">currentAngles</span><span class="p">,</span> <span class="n">joint_effort</span><span class="o">=</span><span class="n">currentForces</span><span class="p">)</span>
+        <span class="n">currentAngles</span> <span class="o">=</span> <span class="n">read6</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">serial</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">'angleAct'</span><span class="p">)</span>
+        <span class="n">currentForces</span> <span class="o">=</span> <span class="n">read6</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">serial</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">'forceAct'</span><span class="p">)</span>
+        <span class="n">interface</span><span class="o">.</span><span class="n">set_robot_state</span><span class="p">(</span><span class="s2">"hand"</span><span class="p">,</span> <span class="n">joint_pos</span><span class="o">=</span><span class="n">currentAngles</span><span class="p">,</span> <span class="n">joint_effort</span><span class="o">=</span><span class="n">currentForces</span><span class="p">)</span>
         <span class="n">interface</span><span class="o">.</span><span class="n">publish_state</span><span class="p">()</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
     <span class="n">robot</span> <span class="o">=</span> <span class="n">InspireHand</span><span class="p">()</span>
     <span class="n">interface</span> <span class="o">=</span> <span class="n">IncarRobotInterface</span><span class="p">(</span>
         <span class="mf">0.1</span><span class="p">,</span>
         <span class="n">command_hooks</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s2">&quot;left.commands.hand.inspire&quot;</span><span class="p">:</span> <span class="n">robot</span><span class="o">.</span><span class="n">move_joints</span>
+            <span class="s2">"left.commands.hand.inspire"</span><span class="p">:</span> <span class="n">robot</span><span class="o">.</span><span class="n">move_joints</span>
         <span class="p">},</span>
         <span class="n">loop_callbacks</span> <span class="o">=</span> <span class="p">[</span>
             <span class="n">robot</span><span class="o">.</span><span class="n">publish_state</span>
         <span class="p">]</span>
     <span class="p">)</span>
-    <span class="n">interface</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">)</span>
+    <span class="n">interface</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s2">"127.0.0.1"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 <p>And voila! We can teleoperate the hand! Note that we also are publishing state back to the incar system, so that we can collect our dataset!</p>
 <div class="admonition todo">
@@ -1304,32 +1372,32 @@ incar<span class="w"> </span>create_pkg<span class="w"> </span>--name<span class
 </ul>
 <p>Note how we can use our mapped feature directly in the dataset. This way, when we train the network, it can output the inspire commands right away. Then, we can train a policy on this data just like any other policy, using the <code>[left/right].commands.hand.inspire</code> feature as an output feature.
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;policy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;input_features&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;wrist_cam&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VISUAL&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;shape&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">240</span><span class="p">,</span><span class="w"> </span><span class="mi">320</span><span class="p">]</span>
+<span class="w">    </span><span class="nt">"policy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"input_features"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"wrist_cam"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VISUAL"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"shape"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">240</span><span class="p">,</span><span class="w"> </span><span class="mi">320</span><span class="p">]</span>
 <span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;hand.joints.position&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;STATE&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;shape&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<span class="w">            </span><span class="nt">"hand.joints.position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"STATE"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"shape"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;output_features&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;left.commands.hand.inspire&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ACTION&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;shape&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<span class="w">        </span><span class="nt">"output_features"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"left.commands.hand.inspire"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTION"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"shape"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">},</span>
 
-<span class="w">        </span><span class="nt">&quot;preprocessing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;steps&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="nt">"preprocessing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"steps"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">                </span><span class="err">...</span><span class="p">,</span>
 <span class="w">                </span><span class="p">{</span>
 <span class="w">                    </span><span class="err">#</span><span class="w"> </span><span class="err">This</span><span class="w"> </span><span class="err">s</span><span class="kc">te</span><span class="err">p</span><span class="w"> </span><span class="err">ca</span><span class="kc">n</span><span class="w"> </span><span class="kc">f</span><span class="err">il</span><span class="kc">ter</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">da</span><span class="kc">ta</span><span class="w"> </span><span class="err">based</span><span class="w"> </span><span class="err">o</span><span class="kc">n</span><span class="w"> </span><span class="err">whe</span><span class="kc">t</span><span class="err">her</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">ha</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="kc">tele</span><span class="err">opera</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="err">was</span><span class="w"> </span><span class="err">e</span><span class="kc">n</span><span class="err">gaged</span><span class="p">,</span><span class="w"> </span><span class="err">usi</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="kc">feet</span><span class="w"> </span><span class="err">pedals.</span>
-<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;filter_by_buttons&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;button_feature_names&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;pedals&quot;</span><span class="p">],</span>
-<span class="w">                    </span><span class="nt">&quot;button_names&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">]</span>
+<span class="w">                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"filter_by_buttons"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"button_feature_names"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"pedals"</span><span class="p">],</span>
+<span class="w">                    </span><span class="nt">"button_names"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"A"</span><span class="p">]</span>
 <span class="w">                </span><span class="p">},</span>
 <span class="w">                </span><span class="err">...</span>
 <span class="w">            </span><span class="p">],</span>
@@ -1349,10 +1417,10 @@ After training, just load the policy and voila! You now have an autonomous hand 
 <summary>Cross-Hand-Type policy</summary>
 <p>If you would want to have policies running cross-hand type, you would need to record the richer full hand joint data and use this as action output for the model. Then, make sure that the preprocessing-step for the joint remapping also hooks into the <code>INFERENCE_COMMAND</code> hook:
 <div class="highlight"><span class="filename">workspace_config.json</span><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;command_processing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"command_processing"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;inspire_hand_remapping&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;hooks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;TELEOP_COMMAND&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;INFERENCE_COMMAND&quot;</span><span class="p">]</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inspire_hand_remapping"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"TELEOP_COMMAND"</span><span class="p">,</span><span class="w"> </span><span class="s2">"INFERENCE_COMMAND"</span><span class="p">]</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">],</span>
 <span class="w">    </span><span class="err">...</span>
@@ -1434,7 +1502,7 @@ After training, just load the policy and voila! You now have an autonomous hand 
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.select", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
