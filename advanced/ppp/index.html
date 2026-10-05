@@ -1106,20 +1106,9 @@
   <h1>Custom data processing</h1>
 
 <p>While the Incar Skill System already provides some common processing functionality out of the box, it would be impossible to cover every single usecase. Luckily, it is not that difficult to extend the data processing pipeline! You can write an <a href="../extensions/">extension</a> containing a <code>ProcessStep</code> subclass, allowing you to process your data at various places within the processing pipeline.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux</label><label for="__tabbed_1_2">Windows</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c1"># ensure that your python venv is sourced</span>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/incar/bin/activate
 incar<span class="w"> </span>create_pkg<span class="w"> </span>--name<span class="w"> </span><span class="o">[</span>package_name<span class="o">]</span><span class="w"> </span>--processing<span class="w"> </span><span class="o">[</span>path<span class="o">]</span>
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c"># ensure that your python venv is sourced</span>
-<span class="n">incar</span> <span class="n">create_pkg</span> <span class="p">-</span><span class="n">-name</span> <span class="no">[package_name]</span> <span class="p">-</span><span class="n">-processing</span> <span class="no">[path]</span>
-</code></pre></div>
-</div>
-</div>
-</div>
 <p>Ensure that the package name is unique to avoid conflicts with other extensions. <code>path</code> is the location where the extension will be created.</p>
 <h2 id="defining-a-process-step">Defining a process step</h2>
 <p>Let's take a look at the commented template that is now generated for you:
@@ -1335,7 +1324,7 @@ incar<span class="w"> </span>create_pkg<span class="w"> </span>--name<span class
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 24, 2026 14:20:54 UTC">April 24, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 5, 2026 10:22:39 UTC">October 5, 2026</span>
   </span>
 
     

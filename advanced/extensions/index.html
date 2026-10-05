@@ -1086,38 +1086,15 @@
 <p>Extensions are the way to extend the Incar Skill System with custom functionality. Extensions are basically a python package that contains one or more subclasses of e.g. camera integrations, data processing steps, or model architectures. A customized version of <a href="https://github.com/INCAR-Robotics/draccus">draccus</a> is used to be able to select these extensions during system usage.</p>
 <h2 id="installing-an-extension">Installing an extension</h2>
 <p>Extensions can be installed with pip:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux</label><label for="__tabbed_1_2">Windows</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c1"># ensure that your python venv is sourced</span>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/incar/bin/activate
 pip<span class="w"> </span>install<span class="w"> </span><span class="o">[</span>package<span class="o">]</span><span class="w">               </span><span class="c1"># package can also be a git url</span>
 pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="o">[</span>path_to_package<span class="o">]</span><span class="w">    </span><span class="c1"># editable install allows for hot-reloading code</span>
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c"># ensure that your python venv is sourced</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="no">[package]</span>               <span class="c"># package can also be a git url</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">-e</span> <span class="no">[path_to_package]</span>    <span class="c"># editable install allows for hot-reloading code</span>
-</code></pre></div>
-</div>
-</div>
-</div>
 <h2 id="creating-an-extension">Creating an extension</h2>
 <p>1. Create a package using the following command:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux</label><label for="__tabbed_2_2">Windows</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c1"># ensure that your python venv is sourced</span>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/incar/bin/activate
 incar<span class="w"> </span>create_pkg<span class="w"> </span>--name<span class="w"> </span><span class="o">[</span>package_name<span class="o">]</span><span class="w"> </span><span class="o">[</span>--ai<span class="o">]</span><span class="w"> </span><span class="o">[</span>--cameras<span class="o">]</span><span class="w"> </span><span class="o">[</span>--processing<span class="o">]</span><span class="w"> </span><span class="o">[</span>--input<span class="o">]</span><span class="w"> </span><span class="o">[</span>path<span class="o">]</span>
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c"># ensure that your python venv is sourced</span>
-<span class="n">incar</span> <span class="n">create_pkg</span> <span class="p">-</span><span class="n">-name</span> <span class="no">[package_name]</span> <span class="p">[-</span><span class="n">-ai</span><span class="p">]</span> <span class="p">[-</span><span class="n">-cameras</span><span class="p">]</span> <span class="p">[-</span><span class="n">-processing</span><span class="p">]</span> <span class="p">[-</span><span class="n">-input</span><span class="p">]</span> <span class="no">[path]</span>
-</code></pre></div>
-</div>
-</div>
-</div>
 <p>Ensure that the package name is unique to avoid conflicts with other extensions. <code>path</code> is the location where the extension will be created. The <code>--ai</code>, <code>--cameras</code>, <code>--processing</code>, <code>--input</code> flags determine which templates to add for quickly getting started. You can enter multiple of these flags. For a more thorough overview of these templates, check the <a href="../policy/">ai</a>, <a href="../camera/">cameras</a>, <a href="../ppp/">processing</a> and <a href="../input/">input</a> pages.</p>
 <p>2. Observe the subfolders that are created for ai extensions, camera extensions, and data processing extensions. In the <code>__init__.py</code> files in these subfolders, ensure that you import all classes that are wrapped in a draccus subclass-selector. For example, if you have the following camera extension (which is the result of the <a href="../camera/">custom camera tutorial</a>):</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">my_extension.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1184,7 +1161,7 @@ incar<span class="w"> </span>create_pkg<span class="w"> </span>--name<span class
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 22, 2026 12:46:37 UTC">September 22, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 5, 2026 10:22:39 UTC">October 5, 2026</span>
   </span>
 
     

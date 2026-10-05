@@ -1028,35 +1028,13 @@
   <h1>Training a policy</h1>
 
 <p>In order to train a policy, simply run the following command</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux</label><label for="__tabbed_1_2">Windows</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c1"># Remember to source the environment first with $ `source [path_to_env]/bin/activate`</span>
-incar<span class="w"> </span>train<span class="w"> </span>--config_path<span class="o">=[</span>config_path<span class="o">]</span>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/incar/bin/activate
+incar<span class="w"> </span>train<span class="w"> </span>--config_path<span class="w"> </span><span class="o">[</span>config_path<span class="o">]</span>
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c"># Remember to source the environment first with $ `[path_to_env]\Scripts\activate`</span>
-<span class="n">incar</span> <span class="n">train</span> <span class="p">-</span><span class="n">-config_path</span><span class="p">=</span><span class="no">[config_path]</span>
-</code></pre></div>
-</div>
-</div>
-</div>
 <p>where <code>config path</code> is a relative or absolute path to the training config file, which contains policy and training information. It is possible to manually override parameters from the config file. For example:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux</label><label for="__tabbed_2_2">Windows</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c1"># Remember to source the environment first with $ `source [path_to_env]/bin/activate`</span>
-incar<span class="w"> </span>train<span class="w"> </span>--config_path<span class="o">=</span>./my_policy.json<span class="w"> </span>--resume<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--model_save_name<span class="o">=</span>example_model
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/incar/bin/activate
+incar<span class="w"> </span>train<span class="w"> </span>--config_path<span class="w"> </span>./my_policy.json<span class="w"> </span>--resume<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--model_save_name<span class="o">=</span>example_model
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c"># Remember to source the environment first with $ `[path_to_env]\Scripts\activate`</span>
-<span class="n">incar</span> <span class="n">train</span> <span class="p">-</span><span class="n">-config_path</span><span class="p">=./</span><span class="n">my_policy</span><span class="p">.</span><span class="n">json</span> <span class="p">-</span><span class="n">-resume</span><span class="p">=</span><span class="n">true</span> <span class="p">-</span><span class="n">-model_save_name</span><span class="p">=</span><span class="n">example_model</span>
-</code></pre></div>
-</div>
-</div>
-</div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>This also works with nested configuration, e.g. passing <code>--policy.preprocessing.validation_ratio=0.15</code> will set the validation ratio to 15%.</p>
@@ -1113,17 +1091,6 @@ incar<span class="w"> </span>train<span class="w"> </span>--config_path<span cla
 <span class="w">                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"filter_by_buttons"</span><span class="p">,</span>
 <span class="w">                    </span><span class="nt">"button_feature_names"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"right.buttons"</span><span class="p">],</span>
 <span class="w">                    </span><span class="nt">"button_names"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"gripValue"</span><span class="p">]</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image_transform"</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"wrist_cam"</span><span class="p">],</span>
-<span class="w">                    </span><span class="nt">"noise_sigma"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.05</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">"transforms"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">"brightness"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="mf">1.4</span><span class="p">],</span>
-<span class="w">                        </span><span class="nt">"contrast"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="mf">1.4</span><span class="p">],</span>
-<span class="w">                        </span><span class="nt">"saturation"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="mf">1.4</span><span class="p">],</span>
-<span class="w">                        </span><span class="nt">"hue"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">-0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">]</span>
-<span class="w">                    </span><span class="p">}</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">]</span>
 <span class="w">        </span><span class="p">}</span>
@@ -1183,7 +1150,7 @@ incar<span class="w"> </span>train<span class="w"> </span>--config_path<span cla
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 27, 2026 15:30:01 UTC">May 27, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 5, 2026 10:22:39 UTC">October 5, 2026</span>
   </span>
 
     
